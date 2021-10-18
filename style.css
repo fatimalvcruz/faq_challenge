@@ -1,0 +1,235 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body{
+    height:800px;
+    background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%) );
+	font-size: 12px;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-weight: 400;
+	
+}
+.container{
+  margin: 148px 25px 0 25px;
+  background: white;
+  border-radius: 20px;
+  max-width: 972px;
+
+}
+
+.scene{
+	display: flex; 
+	justify-content: center;
+	top: -110px; 
+	position: relative;
+}
+ .scene .girl{
+	background: url('/images/illustration-woman-online-mobile.svg') no-repeat transparent;
+	width: 237px;
+	height: 196px;
+	position: absolute;
+
+} 
+.scene .sombra{
+	background: url('/images/bg-pattern-mobile.svg') no-repeat transparent bottom;
+	width: 240px;
+	height: 210px;
+	position: absolute;
+
+}
+.cubo{
+	display: none;
+
+}
+
+.faq{
+    padding-bottom: 50px;
+	padding-top: 136px ;
+} 
+
+.faq .list li{
+	border-bottom: 1px hsl(240, 5%, 91%) solid;
+	padding: 18px 0;
+	margin: 0 18px;
+	position: relative;
+	cursor: pointer;
+}
+
+.title{
+	
+	text-align: center;
+	font-weight: 700;
+	font-size: 36px;
+	padding-top: -80px;
+}
+
+
+.accordion{
+	background-color:white;
+	color:hsl(238, 29%, 16%);
+	cursor: pointer;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 12px;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-weight: 400;
+}
+.active .accordion{
+	font-weight: 700;
+}
+
+.accordion:hover {
+	color: hsl(14, 88%, 65%);
+}
+
+.accordion::after {
+	content: url(images/icon-arrow-down.svg);
+	float: right;
+	margin-left: 5px;
+}
+.active .accordion::after {
+	content: url(images/icon-arrow-down.svg);
+	transform: rotate(180deg);
+  }
+
+.panel {
+	
+	margin-left:5px;
+	padding-top: 12px;
+	line-height: 20px;
+	text-align: left;
+	background-color: white;
+	max-height: 0;
+	overflow: hidden;
+	font-size: 12px;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-weight: 400;
+	color: hsl(237, 12%, 33%);
+  }
+.active .panel{
+
+	max-height: 100%;
+}
+
+
+@media all and (min-width: 972px){
+	.container{
+		margin: 200px auto 0 auto ;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		
+	}
+
+	.collage {
+		position: relative;
+	}
+
+	.scene{
+		top: 0;
+		display: flex; 
+		height: 100%;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.scene .sombra{
+		background: url('/images/bg-pattern-desktop.svg') no-repeat transparent -290px -104px;
+		background-size: 120%;
+		position: absolute;
+		width: 132%;
+		height: 100%;
+	} 
+
+	.scene .girl{
+		background: url('/images/illustration-woman-online-desktop.svg') no-repeat transparent;
+		position: absolute;
+		background-size: 100%;
+		width: 100%;
+		height: 100%;
+		top: 107px;
+		right: 79px;
+	}
+	
+	.cubo{
+		display: block;
+		position: absolute;
+		top: calc(50% - 71px);
+		left: -90px;
+		top:234px;
+	} 
+
+	.faq{
+		padding-right: 92px;
+		padding-bottom: 84px;
+	} 
+	
+
+	.title{
+	display: inline-block;
+	position: relative;
+	top: -41px;
+	left: 17px;
+	}
+
+	.accordion{
+		font-size: 16px;
+	}
+	.panel{
+		font-size: 16px;
+	}
+
+	/* .active .panel{
+		
+	
+	} */
+} 
+
