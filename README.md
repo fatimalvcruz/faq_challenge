@@ -11,7 +11,7 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-- [Author](#author)
+
 
 
 
@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Github](https://github.com/fatimalvcruz/faq_challenge)
 
 ## My process
 
@@ -100,9 +100,7 @@ const accordions = document.querySelectorAll('.list li');
 
 }
 ```
-## Author
 
-- Website - [Add your name here](https://www.your-site.com)
 
 
 

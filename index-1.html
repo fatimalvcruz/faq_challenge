@@ -1,0 +1,84 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Desconocido </title></head><body>
+<h1 id="frontend-mentor-faq-accordion-card-solution">Frontend Mentor - FAQ accordion card solution</h1>
+<p>This is a solution to the <a href="https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam">FAQ accordion card challenge on Frontend Mentor</a>. Frontend Mentor challenges help you improve your coding skills by building realistic projects. </p>
+<h2 id="table-of-contents">Table of contents</h2>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#the-challenge">The challenge</a></li>
+<li><a href="#screenshot">Screenshot</a></li>
+<li><a href="#links">Links</a></li>
+<li><a href="#my-process">My process</a></li>
+<li><a href="#built-with">Built with</a></li>
+<li><a href="#what-i-learned">What I learned</a></li>
+<li><a href="#author">Author</a></li>
+</ul>
+<h2 id="overview">Overview</h2>
+<h3 id="the-challenge">The challenge</h3>
+<p>Users should be able to:</p>
+<ul>
+<li>View the optimal layout for the component depending on their device's screen size. 
+    . Mobile: 375px
+    . Desktop: 1440px</li>
+<li>See hover states for all interactive elements on the page</li>
+<li>Hide/Show the answer to a question when the question is clicked</li>
+</ul>
+<h3 id="screenshot">Screenshot</h3>
+<p><img alt="" src="screen-shot-1.png"/></p>
+<h3 id="links">Links</h3>
+<ul>
+<li>Solution URL: <a href="https://your-solution-url.com">Add solution URL here</a></li>
+</ul>
+<h2 id="my-process">My process</h2>
+<h3 id="built-with">Built with</h3>
+<ul>
+<li>Semantic HTML5 markup</li>
+<li>CSS custom properties</li>
+<li>Flexbox</li>
+<li>CSS Grid</li>
+<li>Mobile-first workflow</li>
+<li>Native Javascript</li>
+</ul>
+<h3 id="what-i-learned">What I learned</h3>
+<p>In this project I learned how important it is to define a good structure in HTML in the first place, as it can help you to apply the style more easily later.
+I used the mobile-first strategy and applied different styles to the classes, I also used the specific images for this size. After that I used media@ to change some classes and images and to make my project responsive. The size I used with @media was a minimum width of 972px.</p>
+<p><code>css
+@media all and (min-width: 972px){}</code></p>
+<p>In the mobile view, only one column is needed with the images on top and the accordion below. To overlay some images on top of others, I used the flex property and I set the rest of the elements in space.</p>
+<p><code>css
+.scene{
+    display: flex; 
+    justify-content: center;
+    top: -110px; 
+    position: relative;
+}</code></p>
+<p>In the desktop view, there were necessary two columns so I used grid property then grid-template-columns to put both columns inline.</p>
+<p><code>css
+    .container{
+        margin: 200px auto 0 auto ;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+  }</code></p>
+<p>In desktop view images cannot protrude from container, so I applied overflow: hidden property, then I set the rest of the elements in space.</p>
+<p><code>css
+.scene{
+        top: 0;
+        display: flex; 
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+    }</code>
+For active the accordion I used native javascript  applying “for”  to cycle through all the elements, then the function addEventListener with click event to active the toggle and this way unfold the hidden part of the accordion.</p>
+<p>```js
+const accordions = document.querySelectorAll('.list li');</p>
+<p>for(i=0; i&lt;accordions.length ; i++){
+    accordions[i].addEventListener('click', function (){ 
+      this.classList.toggle('active') 
+   })
+ }</p>
+<p>}
+```</p>
+<h2 id="author">Author</h2>
+<ul>
+<li>Website - <a href="https://www.your-site.com">Add your name here</a></li>
+</ul>
+</body></html>
